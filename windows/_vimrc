@@ -1,0 +1,98 @@
+" mklink or copy to root of home directory with name "_vimrc"
+
+set nocompatible
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+"prevent temp files being created in C:\Windows\system32
+set directory=.,$TEMP
+
+"start maximised
+au GUIEnter * simalt ~x
+
+"show line numbers
+set nu
+
+"prevent backup files (~)
+set nobackup
+
+set cursorline
+set scrolloff=5
+
+"enable spell check
+set spell spelllang=en_gb
+
+"styles
+colorscheme desert
+set guifont=consolas:h11
+set history=100
+
+syntax enable
+set syntax=on
+
+set paste
+" toggle paste when in insert mode
+set pastetoggle=<F11>
+
+set noexpandtab
+set softtabstop=0
+set shiftwidth=4
+set tabstop=4
+
+"automatically indent
+set smartindent
+set cindent
+
+"case insensitive search
+set ignorecase
+"revert to case sensitive if search contains capitals
+set smartcase
+set infercase
+set nowrap
+
+"make it so mouse and keyboard don't exit select mode."
+"this makes it so we can select with the mouse and then act on that block."
+set selectmode=""
+
+"completion menu
+set wildmenu
+set wildmode=list:longest
+
+"list options
+"tabs as >---
+"end of lines as $
+"tailing as _
+set listchars=tab:>-,eol:$,trail:_
+
+"always show the status line
+set laststatus=2
+set ruler
+
+" show matching brackets
+set showmatch
+
+set diffexpr=MyDiff()
+function MyDiff()
+  let opt = '-a --binary '
+  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let eq = ''
+  if $VIMRUNTIME =~ ' '
+    if &sh =~ '\<cmd'
+      let cmd = '""' . $VIMRUNTIME . '\diff"'
+      let eq = '"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
