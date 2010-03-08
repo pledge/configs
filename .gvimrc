@@ -1,1 +1,2 @@
 set cursorline
+colorscheme desert

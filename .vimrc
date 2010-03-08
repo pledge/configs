@@ -10,7 +10,7 @@ set scrolloff=5
 set spell spelllang=en_gb
 
 "styles
-colorscheme desert
+colorscheme slate
 set history=100
 
 syntax enable
