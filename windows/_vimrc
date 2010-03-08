@@ -53,8 +53,8 @@ set smartcase
 set infercase
 set nowrap
 
-"make it so mouse and keyboard don't exit select mode."
-"this makes it so we can select with the mouse and then act on that block."
+"make it so mouse and keyboard don't exit select mode.
+"this makes it so we can select with the mouse and then act on that block.
 set selectmode=""
 
 "completion menu.  
