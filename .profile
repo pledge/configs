@@ -37,6 +37,8 @@ fi
 
 # Aliases
 alias ll='ls -lha'
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool FALSE ; killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool TRUE ; killall Finder"
 
 # Shopt
 shopt -s cdspell #allow incorrect directory names to be corrected
@@ -86,4 +88,8 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1 #show % if any untracked files
 # Editors 
 export EDITOR='vim'
 export GIT_EDITOR='vim'
+
+# Java
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home 
+export PATH=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home/bin:$PATH
 

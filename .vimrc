@@ -1,5 +1,6 @@
 set nocompatible
 
+
 "show line numbers
 set nu
 
@@ -26,6 +27,7 @@ set shiftwidth=4
 set tabstop=4
 
 "automatically indent
+set ai
 set smartindent
 set cindent
 
