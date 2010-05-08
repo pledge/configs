@@ -35,6 +35,7 @@ set smartindent
 set cindent
 
 set hlsearch
+set incsearch
 "case insensitive search
 set ignorecase
 "revert to case sensitive if search contains capitals
