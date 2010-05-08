@@ -4,11 +4,14 @@ set nocompatible
 "show line numbers
 set nu
 
+" make backspace work as expected
+set backspace=indent,eol,start
+
 "set cursorline
 set scrolloff=5
 
 "enable spell check
-set spell spelllang=en_gb
+set nospell spelllang=en_gb
 
 "styles
 colorscheme slate
@@ -31,6 +34,7 @@ set ai
 set smartindent
 set cindent
 
+set hlsearch
 "case insensitive search
 set ignorecase
 "revert to case sensitive if search contains capitals

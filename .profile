@@ -49,6 +49,8 @@ bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on" 
 
 set -o vi #vi edit mode
+# ^l clear screen
+bind -m vi-insert "\C-l":clear-screen
 
 # History
 export HISTCONTROL=ignoredups
@@ -93,3 +95,17 @@ export GIT_EDITOR='vim'
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home 
 export PATH=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home/bin:$PATH
 
+# Android
+export PATH=~/dev/android/android/tools:$PATH
+
+# Go
+export GOROOT=~/dev/golang/golang
+export GOS=darwin
+export GOARCH=amd64
+export GOBIN=~/dev/golang/bin
+
+export PATH=$PATH:$GOBIN
+
+function mkcd() {
+  [ -n "$1" ] && mkdir -p "$@" && cd "$1";
+}
