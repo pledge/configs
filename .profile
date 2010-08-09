@@ -106,6 +106,14 @@ export GOBIN=~/dev/golang/bin
 
 export PATH=$PATH:$GOBIN
 
-function mkcd() {
-  [ -n "$1" ] && mkdir -p "$@" && cd "$1";
+# mkdir, cd into it
+mkcd () {
+	mkdir -p "$*"
+	cd "$*"
 }
+
+# source highlight
+alias ccat=src-hilite-lesspipe.sh 
+export LESSOPEN="| src-hilite-lesspipe.sh %s"
+export LESS=' -R '
+
