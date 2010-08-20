@@ -120,3 +120,6 @@ export LESS=' -R '
 alias www1='ssh aleitch@192.168.21.211'
 alias www2='ssh aleitch@192.168.21.212'
 alias db1='ssh aleitch@192.168.20.215'
+
+#autojump
+source /Users/mgilday/Documents/development/source/autojump/autojump.bash
