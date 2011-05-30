@@ -29,6 +29,7 @@ alias colorslist="set | egrep 'COLOR_\w*'"  # lists all the colors
 
 # Add MacPort directories to the PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=~/dev/bin:$PATH
 
 # Source bash completion
 if [ -f /opt/local/etc/bash_completion ]; then
@@ -90,21 +91,11 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1 #show % if any untracked files
 # Editors 
 export EDITOR='vim'
 export GIT_EDITOR='vim'
+alias mvim='mvim --remote-tab-silent'
 
 # Java
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home 
 export PATH=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home/bin:$PATH
-
-# Android
-export PATH=~/dev/android/android/tools:$PATH
-
-# Go
-export GOROOT=~/dev/golang/golang
-export GOS=darwin
-export GOARCH=amd64
-export GOBIN=~/dev/golang/bin
-
-export PATH=$PATH:$GOBIN
 
 # mkdir, cd into it
 mkcd () {
