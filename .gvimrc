@@ -1,2 +1,5 @@
 set cursorline
-colorscheme desert
+set guifont=Monaco:h13
+
+set background=light
+colorscheme solarized
