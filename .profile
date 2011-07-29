@@ -49,9 +49,9 @@ shopt -s cmdhist #multiline commands kept as one history item
 bind "set completion-ignore-case on" 
 bind "set show-all-if-ambiguous on" 
 
-set -o vi #vi edit mode
+#set -o vi #vi edit mode
 # ^l clear screen
-bind -m vi-insert "\C-l":clear-screen
+#bind -m vi-insert "\C-l":clear-screen
 
 # History
 export HISTCONTROL=ignoredups
@@ -97,6 +97,9 @@ alias mvim='mvim --remote-tab-silent'
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home 
 export PATH=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home/bin:$PATH
 
+# Python
+export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/:$PATH
+
 # mkdir, cd into it
 mkcd () {
 	mkdir -p "$*"
@@ -111,4 +114,5 @@ export LESS=' -R '
 alias www1='ssh aleitch@192.168.21.211'
 alias www2='ssh aleitch@192.168.21.212'
 alias db1='ssh aleitch@192.168.20.215'
+
 

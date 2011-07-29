@@ -1,0 +1,7 @@
+[user]
+	name = Martin Gilday
+	email = mgilday@imap.cc
+[core]
+	excludesfile = /Users/mgilday/.gitignore_global
+[color]
+	ui = true
