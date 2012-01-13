@@ -111,3 +111,5 @@ alias ccat=src-hilite-lesspipe.sh
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
+#git toggle
+source ~/Dropbox/development/dotfiles/git-config-toggle.sh
