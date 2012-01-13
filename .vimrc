@@ -2,6 +2,14 @@ set nocompatible
 
 call pathogen#runtime_append_all_bundles() 
 
+" directories
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+
+set undofile
+set undodir=~/.vim/undo
+
 "show line numbers
 set nu
 
@@ -77,4 +85,6 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
-
+noremap <leader>o <Esc>:CommandT<CR>
+noremap <leader>O <Esc>:CommandTFlush<CR>
+noremap <leader>m <Esc>:CommandTBuffer<CR>
