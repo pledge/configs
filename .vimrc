@@ -1,6 +1,7 @@
 set nocompatible
 
-call pathogen#runtime_append_all_bundles() 
+"call pathogen#runtime_append_all_bundles() 
+call pathogen#infect()
 
 " directories
 set backup
@@ -23,6 +24,7 @@ set scrolloff=5
 set nospell spelllang=en_gb
 
 "styles
+set background=dark
 colorscheme slate
 set history=100
 
@@ -42,6 +44,7 @@ set tabstop=4
 set ai
 set smartindent
 set cindent
+filetype plugin indent on
 
 set hlsearch
 set incsearch
@@ -88,3 +91,5 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 noremap <leader>o <Esc>:CommandT<CR>
 noremap <leader>O <Esc>:CommandTFlush<CR>
 noremap <leader>m <Esc>:CommandTBuffer<CR>
+
+
