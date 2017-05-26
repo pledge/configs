@@ -1,3 +1,4 @@
+echo "Sourching .profile"
 # Interative shell source order: 
 #    /etc/profile 
 #    /etc/bashrc
@@ -96,3 +97,5 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1 #show % if any untracked files
 alias ccat=src-hilite-lesspipe.sh 
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
+
+export PATH="$HOME/.cargo/bin:$PATH"
