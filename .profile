@@ -98,4 +98,4 @@ alias ccat=src-hilite-lesspipe.sh
 export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/go/bin:$PATH"
