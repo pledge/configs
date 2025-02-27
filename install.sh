@@ -9,6 +9,7 @@ pushd ~/.vim/bundle;
 git clone https://github.com/altercation/vim-colors-solarized.git
 popd;
 
+pushd ~
 unlink ~/.zpreztorc;
 unlink ~/.zshrc;
 ln -s ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/development/projects/configs/.zpreztorc;
@@ -20,3 +21,4 @@ ln -s ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/development/projects/con
 ln -s ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/development/projects/configs/.profile;
 ln -s ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/development/projects/configs/.pythonrc;
 ln -s ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/development/projects/configs/.vimrc;
+popd
